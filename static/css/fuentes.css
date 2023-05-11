@@ -1,0 +1,58 @@
+/* ==============================================================
+/*	FONTS
+/* ============================================================== */
+	@font-face {
+		font-family: 'Point-Regular';
+		src: url('fonts/Point/Point-Regular.woff2') format('woff2'), url('fonts/Point/Point-Regular.woff') format('woff');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Point-Bold';
+		src: url('fonts/Point/Point-Bold.woff2') format('woff2'), url('fonts/Point/Point-Bold.woff') format('woff');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Point-ExtraBold';
+		src: url('fonts/Point/Point-ExtraBold.woff2') format('woff2'), url('../recursos/tipografias/Point-ExtraBold.woff') format('woff');
+		font-display: swap;
+	}
+
+
+    body {
+        font-family: 'rotoplas-regular', sans-serif;
+        color: #002554;
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+
+	.bold {
+		font-family: 'Point-Bold';
+	}
+    .regular {
+		font-family: 'Point-Regular';
+	}
+	.extra-bold {
+		font-family: 'Point-ExtraBold';
+	}
+
+
+	::-webkit-input-placeholder { /* Edge */
+		font-family: 'Point-Regular';
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		font-family: 'Point-Regular';
+	}
+	::placeholder {
+		font-family: 'Point-Regular';
+	}
+/* fuentes */
+
+
+/* ==============================================================
+/*	FONT SIZE
+/* ============================================================== */
+	.fs-14 { 
+		font-size: 14px; 
+	}
+/* tamaños fuentes */
