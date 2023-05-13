@@ -1,6 +1,6 @@
 <template>
-	<div>
-		Inicio
+	<div class="container">
+		<h1>Home</h1>
 	</div>
 </template>
 
@@ -11,10 +11,10 @@
 
 <script>
 	export default {
-		name: 'inicio',
+		name: 'home',
 		head() {
 			return {
-				title: 'Acuantia | Inicio'
+				title: 'Acuantia | Home'
 			}
 		}
 	}
