@@ -19,7 +19,7 @@ export default {
 			},
 			{
 				rel: 'stylesheet',
-				href: '/css/estilos.css'
+				href: '/css/styles.css'
 			}
 		],
 		script: [

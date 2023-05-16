@@ -1,36 +1,11 @@
-@import "fuentes.css";
-@import "colores.css";
+@import "fonts.css";
+@import "colors.css";
+
 
 a {
     text-decoration: none;
 }
 
-.rtp-btn {
-	background: #009cde;
-	color: #fff;
-	padding: .3rem 1rem;
-	border-radius: 20px;
-	transition: all ease .3s;
-}
-.rtp-btn:hover {
-	background: #236192;
-	color: #fff;
-}
-
-.rtp-outline-btn {
-    padding: 0.25rem 1rem;
-    border: 2px solid;
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 20px;
-    transform: all ease .3s;
-}
-.rtp-outline-btn:hover {
-    border-color: #009CDE;
-}
-.rtp-outline-blue5 {
-    border-color: #002554;
-}
 
 /* ==============================================================
 /*	HOVER
