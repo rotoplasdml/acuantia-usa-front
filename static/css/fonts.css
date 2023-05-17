@@ -2,6 +2,11 @@
 /*	FONTS
 /* ============================================================== */
 	@font-face {
+		font-family: 'Point-Light';
+		src: url('fonts/Point/Point-Light.woff2') format('woff2'), url('fonts/Point/Point-Light.woff') format('woff');
+		font-display: swap;
+	}
+	@font-face {
 		font-family: 'Point-Regular';
 		src: url('fonts/Point/Point-Regular.woff2') format('woff2'), url('fonts/Point/Point-Regular.woff') format('woff');
 		font-display: swap;
@@ -13,13 +18,13 @@
 	}
 	@font-face {
 		font-family: 'Point-ExtraBold';
-		src: url('fonts/Point/Point-ExtraBold.woff2') format('woff2'), url('../recursos/tipografias/Point-ExtraBold.woff') format('woff');
+		src: url('fonts/Point/Point-ExtraBold.woff2') format('woff2'), url('fonts/Point/Point-ExtraBold.woff') format('woff');
 		font-display: swap;
 	}
 
 
     body {
-        font-family: 'rotoplas-regular', sans-serif;
+        font-family: 'Point-Regular', sans-serif;
         color: #002554;
         font-size: 1rem;
         line-height: normal;
@@ -34,6 +39,9 @@
 	}
 	.extra-bold {
 		font-family: 'Point-ExtraBold';
+	}
+	.light {
+		font-family: 'Point-Light';
 	}
 
 

@@ -6,6 +6,24 @@ a {
     text-decoration: none;
 }
 
+.ac-btn {
+    padding: 0.5rem 1rem;
+    background: #242c36;
+    border-radius: 2rem;
+    color: #fff;
+    transition: all ease .3s;
+}
+.ac-btn svg {
+    fill: #2b73ff;
+    width: 18px;
+    transition: all ease .3s;
+}
+.ac-btn:hover {
+    color: #a0daf6;
+}
+.ac-btn:hover svg {
+    fill: #a0daf6;
+}
 
 /* ==============================================================
 /*	HOVER

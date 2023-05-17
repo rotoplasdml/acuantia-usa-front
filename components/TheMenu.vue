@@ -76,6 +76,10 @@
 
 
 <style>
+	nav {
+		font-size: 14px;
+	}
+	
 	.navbar-brand img {
 		width: 200px;
 	}
