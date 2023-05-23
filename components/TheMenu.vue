@@ -1,7 +1,7 @@
 <template>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-ac1 px-3">
 		<NuxtLink class="navbar-brand" to="/">
-			<img id="nav-logo" src="images/acuantia-logo-negative.svg" alt="Acuantia Logo" title="Acuantia">
+			<img id="nav-logo" src="~/assets/images/common/acuantia-logo-negative.svg" alt="Acuantia Logo" title="Acuantia">
 		</NuxtLink>
 
 		<button 
@@ -21,8 +21,16 @@
 				<li class="nav-item mx-xl-1">
 					<NuxtLink class="nav-link" to="/">Home</NuxtLink>
 				</li>
-				<li class="nav-item mx-xl-1">
-					<NuxtLink class="nav-link" to="services">Services</NuxtLink>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+					<ul class="dropdown-menu">
+						<li>
+							<NuxtLink class="dropdown-item" to="/services/for-my-home">For my home</NuxtLink>
+						</li>
+						<li>
+							<NuxtLink class="dropdown-item" to="/services/residential-and-development">Residential & Development</NuxtLink>
+						</li>
+					</ul>
 				</li>
 				<li class="nav-item mx-xl-1">
 					<a class="nav-link" href="#">Service Area</a>
@@ -35,7 +43,7 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-					<ul class="dropdown-menu dropdown-menu-lg-end">
+					<ul class="dropdown-menu">
 						<li>
 							<NuxtLink class="dropdown-item" to="/empresa/">Company</NuxtLink>
 						</li>
@@ -55,7 +63,7 @@
 				</li>
 				<li class="nav-item mx-xl-1">
 					<NuxtLink class="nav-link menu-dinamyc-phone" to="/">
-						<img src="/images/icon-menu-phone.svg" alt="Icon" title="Phone">
+						<img src="~/assets/images/common/icon-menu-phone.svg" alt="Icon" title="Phone">
 						Dynamic Btn
 					</NuxtLink>
 				</li>
