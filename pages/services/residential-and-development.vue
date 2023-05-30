@@ -3,9 +3,9 @@
 		<!-- header -->
 		<div id="header" class="row bg-ac2 align-items-center">
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6  offset-lg-0 | col-xl-3 offset-xl-1 | p-3 text-white">
-				<img class="my-2 me-2" src="~/assets/images/services/for-my-home/fmh-icon.svg" alt="Icon" title="For my home" style="width: 120px;">
+				<img class="my-2 me-2" src="~/assets/images/services/res-and-dev/res-and-dev-icon.svg" alt="Icon" title="For my home" style="width: 120px;">
 				<h2 class="mb-3 extra-bold fs-1">Residential & Development</h2>
-				<p class="my-3">We help homeowners solve their septic needs in our seamless, cost-effective, One Stop Shop Process. Choose Acuantia for your first & last stop for everything septic.</p>
+				<p class="my-3">We take care of the entire septic process for you so you can focus on the build.  Let us save you time, effort, and cost by keeping septic on schedule and within budget.</p>
 				<a class="ac-btn my-3 hvr-forward" href="">
 					Talk to An Expert Today
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
@@ -16,13 +16,13 @@
 				</a>
 			</div>
 			<div class="col-12 | col-sm-12 offset-sm-0 | col-lg-6 offset-lg-0 | col-xl-7 offset-xl-1 | p-0">
-				<img class="w-100" src="~/assets/images/home/home-header.jpg" alt="Image">
+				<img class="w-100" src="~/assets/images/services/res-and-dev/header-1.jpg" alt="Image">
 			</div>
 		</div>
 		<!-- services -->
 		<div id="services" class="row">
 			<div class="col-12 offset-0 | col-md-8 offset-md-2 | text-center">
-				<h2 class="extra-bold fs-1 ac-1 mb-3">Septic Services for Residential and Commercial</h2>
+				<h2 class="extra-bold fs-1 ac-1 mb-3">Septic Services for Builders</h2>
 			</div>
 			<!-- slider -->
 			<div class="col-12 offset-0 | col-md-10 offset-md-1 | p-3">
@@ -75,66 +75,18 @@
 				<p>We provide you with a simplified, hassle-free experience to take the headache out of dealing with septic installations, maintenance, and issues. By partnering with a variety of the best local service providers, we help you relax and save time instead of worrying about the contractor, regulations, or roadblocks.</p>
 				<p>Take it from some of our recent customers.</p>
 			</div>
-			<!-- reasons cards -->
-			<div id="reasons-cards" class="my-3 py-3 | col-12 offset-0 | col-md-10 offset-md-1">
-				<!-- 1 -->
-				<div class="reasons-card">
-					<div class="reasons-card-client">
-						<img src="~/assets/images/common/client-1.jpg" alt="Portrait">
-						<p class="mb-0">
-							<span>JEFF, CA</span><br>
-							<span>Client</span>
-						</p>
-					</div>
-					<div class="reasons-card-stars my-3">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-					</div>
-					<p class="mb-0">I selected Acuantia because of their engineering expertise i.e. Les Miyashiro, consulting engineer. Les is recognized for his ability to engineer for even the most complicated situations. He’s done work for me in the past. I’d bet on Les to get just about any project approved.</p>
-				</div>
-				<!-- 2 -->
-				<div class="reasons-card">
-					<div class="reasons-card-client">
-						<img src="~/assets/images/common/client-2.jpg" alt="Portrait">
-						<p class="mb-0">
-							<span>LORRAINE, CA</span><br>
-							<span>Client</span>
-						</p>
-					</div>
-					<div class="reasons-card-stars my-3">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-					</div>
-					<p class="mb-0">Acuantia’s pro did an outstanding job assisting our family with all the septic and environmental issues we faced over several years. We would not have had the successful subdivision without his caring support and expertise. He is committed loyal and one of the best, I highly recommend his services.</p>
-				</div>
-				<!-- 3 -->
-				<div class="reasons-card">
-					<div class="reasons-card-client">
-						<img src="~/assets/images/common/client-3.jpg" alt="Portrait">
-						<p class="mb-0">
-							<span>JACOB, CA</span><br>
-							<span>Client</span>
-						</p>
-					</div>
-					<div class="reasons-card-stars my-3">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-						<img src="~/assets/images/common/icon-star.svg" alt="Portrait">
-					</div>
-					<p class="mb-0">I’ve worked on three projects, two in Fairfield and one in the mountains (Calaveras County). Acuantia’s team are my “Go to” whenever I have a project. Sound advice, great engineering, solid installs – what else is there!</p>
-				</div>
-			</div>
 			<!-- video -->
-			<div class="col-12 text-center my-3 py-3">
-				video
+			<div class="col-12 | col-sm-10 offset-sm-1 | col-md-8 offset-md-2 | col-xxl-6 offset-xxl-3 | text-center my-3 py-3">
+				<div class="reasons-video">
+					<video style="width: 100%; margin-bottom: -4px;" poster="/video/poster-1.jpg" controls>
+						<source src="/video/mov_bbb.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<div class="w-100 p-3 text-white bg-ac1 text-start">
+						<p class="mb-0">Daniel</p>
+						<p class="mb-0">Contractor, CA</p>
+					</div>
+				</div>
 			</div>
 			<!-- btn -->
 			<div class="col-12 text-center">
@@ -151,7 +103,7 @@
 		<!-- talk -->
 		<div class="row bg-ac4 align-items-center">
 			<div class="col-12 | col-sm-12 offset-sm-0 | col-lg-6 | p-0">
-				<img class="w-100" src="~/assets/images/home/talk-expert-backround.jpg" alt="Image">
+				<img class="w-100" src="~/assets/images/services/res-and-dev/talk-1.jpg" alt="Image">
 			</div>
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6 offset-lg-0 | col-xl-4 offset-xl-1 | p-3">
 				<h2 class="extra-bold mb-0">Talk to An Expert Today</h2>
@@ -166,55 +118,34 @@
 				</a>
 			</div>
 		</div>
-		<!-- our projects -->
-		<div id="our-projects" class="row">
-			<div class="col-12 text-center mb-3 pb-3">
-				<h2 class="extra-bold fs-1">Our projects</h2>
-			</div>
-			<!-- projects cards -->
-			<div id="projects-cards" class="col-md-10 offset-md-1 | col-12 offset-0">
-				<div class="project-card">
-					<img class="mb-3" src="~/assets/images/services/for-my-home/projects-1.jpg" alt="Image">
-					<p class="bold">Residential - Austin, TX</p>
-				</div>
-				<div class="project-card">
-					<img class="mb-3" src="~/assets/images/services/for-my-home/projects-2.jpg" alt="Image">
-					<p class="bold">Peterson Roth Install - Austin, TX</p>
-				</div>
-				<div class="project-card">
-					<img class="mb-3" src="~/assets/images/services/for-my-home/projects-3.jpg" alt="Image">
-					<p class="bold">Residential - Austin, TX</p>
-				</div>
-			</div>
-		</div>
 		<!-- more resources -->
-		<div id="more-resources" class="row bg-ac4">
+		<div id="more-resources" class="row">
 			<div class="col-12 text-center mb-3 pb-3">
 				<h2 class="extra-bold fs-1">More Resources</h2>
 			</div>
 			<!-- resources cards -->
 			<div id="resources-cards" class="col-lg-10 offset-lg-1 | col-12 offset-0">
 				<div class="resource-card">
-					<img src="~/assets/images/services/for-my-home/resources-1.jpg" alt="Image">
+					<img src="~/assets/images/services/res-and-dev/mr-1.jpg" alt="Image">
 					<div class="p-3">
-						<h3 class="extra-bold mb-3 fs-5">Do ADU’s Need a Separate Septic System?</h3>
-						<p>Accessory Dwelling Units (ADU), commonly called granny flats or in-law apartments, are a great alternative for affordable housing, especially in areas with an inflated real estate market (and limited housing supply).</p>
+						<h3 class="extra-bold mb-3 fs-5">Septic Systems for Campgrounds, RV Parks, and Mobile Home Parks</h3>
+						<p>When creating a septic system for a mobile home park, campground or RV park it’s imperative that your site is engineered correctly, the system is of an appropriate size and you’re taking the types of waste into consideration.</p>
 						<a class="hvr-forward" href="#">Continue reading</a>
 					</div>
 				</div>
 				<div class="resource-card">
-					<img src="~/assets/images/services/for-my-home/resources-2.jpg" alt="Image">
+					<img src="~/assets/images/services/res-and-dev/mr-2.jpg" alt="Image">
 					<div class="p-3">
-						<h3 class="extra-bold mb-3 fs-5">Taking Proper Care Of Your Septic System – What You Can’t Flush Down The Drain</h3>
-						<p>Not everyone is informed of the hazards associated with flushing foreign objects down the sink or toilet.</p>
+						<h3 class="extra-bold mb-3 fs-5">Community and Cluster Septic Systems</h3>
+						<p>The disposal of waste is a necessity in modern society. Diseases would be prevalent without sewer and septic systems, and the environment would be irreversibly contaminated.</p>
 						<a class="hvr-forward" href="#">Continue reading</a>
 					</div>
 				</div>
 				<div class="resource-card">
-					<img src="~/assets/images/services/for-my-home/resources-3.jpg" alt="Image">
+					<img src="~/assets/images/services/res-and-dev/mr-3.jpg" alt="Image">
 					<div class="p-3">
-						<h3 class="extra-bold mb-3 fs-5">Acuantia: Your Septic Tank Services One-Stop Shop</h3>
-						<p>Here at Acuantia, we are proud to say that we provide all of your septic tank service needs!</p>
+						<h3 class="extra-bold mb-3 fs-5">Large Capacity Septic Systems for Apartment Buildings, Commercial Buildings, State Parks and More</h3>
+						<p>All septic systems need two main components to ensure the entire system works properly.</p>
 						<a class="hvr-forward" href="#">Continue reading</a>
 					</div>
 				</div>
@@ -303,100 +234,6 @@
 
 		.home-slide img {
 			width: 200px;
-		}
-
-
-	/* ---------------- */
-	/*	Reasons
-	/* ---------------- */
-		#reasons-cards {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-		}
-
-		.reasons-card {
-			width: 30%;
-			background: #fff;
-			border-radius: 1rem;
-			padding: 3rem 2rem;
-		}
-
-
-		.reasons-card-client {
-			display: flex;
-			justify-content: start;
-			align-items: center;
-		}
-		.reasons-card-client img {
-			border-radius: 50%;
-			margin-right: .5rem;
-		}
-
-
-		.reasons-card-stars img {
-			width: 26px;
-			margin-right: .5rem;
-		}
-
-		@media screen and (max-width: 1023px) {
-			#reasons-cards {
-				justify-content: center;
-				flex-wrap: wrap;
-				gap: 1rem;
-			}
-
-			.reasons-card {
-				width: 45%;
-			}
-		}
-
-		@media screen and (max-width: 768px) {
-			.reasons-card {
-				width: 45%;
-			}
-		}
-
-		@media screen and (max-width: 576px) {
-			.reasons-card {
-				width: 90%;
-			}
-		}
-	
-	
-	/* ---------------- */
-	/*	Our projects
-	/* ---------------- */
-		#projects-cards {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-		}
-
-		.project-card {
-			width: 30%;
-		}
-		.project-card img {
-			width: 100%;
-			border-radius: .3rem;
-		}
-
-		@media screen and (max-width: 768px) {
-			#projects-cards {
-				justify-content: center;
-				flex-wrap: wrap;
-				gap: 1rem;
-			}
-
-			.project-card {
-				width: calc(50% - 2rem);
-			}
-		}
-
-		@media screen and (max-width: 567px) {
-			.project-card {
-				width: 100%;
-			}
 		}
 
 

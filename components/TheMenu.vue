@@ -33,31 +33,31 @@
 					</ul>
 				</li>
 				<li class="nav-item mx-xl-1">
-					<a class="nav-link" href="#">Service Area</a>
+					<NuxtLink class="nav-link" to="/service-area">Service Area</NuxtLink>
 				</li>
 				<li class="nav-item mx-xl-1">
-					<a class="nav-link" href="#">Become a partner</a>
+					<NuxtLink class="nav-link" to="/become-a-partner">Become a partner</NuxtLink>
 				</li>
 				<li class="nav-item mx-xl-1">
-					<a class="nav-link" href="#">Submit your project</a>
+					<NuxtLink class="nav-link" to="/submit-your-project">Submit your project</NuxtLink>
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
 					<ul class="dropdown-menu">
 						<li>
-							<NuxtLink class="dropdown-item" to="/empresa/">Company</NuxtLink>
+							<NuxtLink class="dropdown-item" to="/about-us/company">Company</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink class="dropdown-item" to="/empresa/">Blog</NuxtLink>
+							<NuxtLink class="dropdown-item" to="/about-us/blog">Blog</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink class="dropdown-item" to="/empresa/">Contact Us</NuxtLink>
+							<NuxtLink class="dropdown-item" to="/about-us/contact-us">Contact Us</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink class="dropdown-item" to="/empresa/">FAQ</NuxtLink>
+							<NuxtLink class="dropdown-item" to="/about-us/faq">FAQ</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink class="dropdown-item" to="/empresa/">Shop our brands</NuxtLink>
+							<NuxtLink class="dropdown-item" to="/about-us/shop-our-brands">Shop our brands</NuxtLink>
 						</li>
 					</ul>
 				</li>
