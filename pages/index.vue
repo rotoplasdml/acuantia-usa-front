@@ -290,7 +290,7 @@
 
 	.reasons-card-client {
 		display: flex;
-		justify-content: start;
+		justify-content: flex-start;
 		align-items: center;
 	}
 	.reasons-card-client img {
@@ -347,7 +347,8 @@
 	export default {
 		name: 'home',
 		mounted: function() {
-			console.log('mounted')
+			console.log('home:mounted')
+			// configuracion del slider
 			const swiper = new Swiper('.swiper', {
 				// * Optional parameters
 				slidesPerView: 1,

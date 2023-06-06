@@ -68,7 +68,9 @@
 					</NuxtLink>
 				</li>
 				<li class="nav-item mx-xl-1">
-					<NuxtLink class="nav-link" to="/">Dynamic Txt</NuxtLink>
+					<NuxtLink class="nav-link" to="/">
+						{{ this.$store.state.userCity }}, {{ this.$store.state.userState }}
+					</NuxtLink>
 				</li>
 			</ul>
 		</div>

@@ -325,7 +325,7 @@
 
 		.reasons-card-client {
 			display: flex;
-			justify-content: start;
+			justify-content: flex-start;
 			align-items: center;
 		}
 		.reasons-card-client img {
