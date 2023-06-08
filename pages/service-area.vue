@@ -3,7 +3,7 @@
 		<!-- header -->
 		<div id="header" class="row align-items-center">
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6  offset-lg-0 | col-xl-3 offset-xl-1 | p-3">
-				<h2 class="mb-3 extra-bold fs-1">We've got you Covered in XXX</h2>
+				<h2 class="mb-3 extra-bold fs-1">We've got you Covered in {{this.$store.state.userLat}}</h2>
 				<p class="my-3">Talk to a Local Expert:</p>
 				<a class="ac-btn my-3 hvr-forward" href="">
 					Submit Your Project
@@ -14,8 +14,9 @@
 					</svg>
 				</a>
 			</div>
+			<!-- Map -->
 			<div class="col-12 | col-sm-12 offset-sm-0 | col-lg-6 offset-lg-0 | col-xl-7 offset-xl-1 | p-0">
-				<img class="w-100" src="~/assets/images/home/home-header.jpg" alt="Image">
+				<div id="map" class=""></div>
 			</div>
 		</div>
 		<!-- services -->
@@ -64,6 +65,13 @@
 
 <style>
 	/* ---------------- */
+	/*	Mapa
+	/* ---------------- */
+		#map {
+			width: 100%;
+			height: 500px;
+		}
+	/* ---------------- */
 	/*	Slider
 	/* ---------------- */
 		.swiper {
@@ -99,6 +107,7 @@
 
 
 <script>
+	//import { mapState } from "vuex"
 	export default {
 		name: 'service-area',
 		head() {
@@ -108,42 +117,61 @@
 					{ 
 						rel: 'stylesheet', 
 						href: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' 
-					}
+					},
+					
 				],
 				script: [
 					{ 
 						src: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js' 
-					}
+					},
+					
 				]
+			}
+		},
+		data() {
+            return {
+				//userLat: this.$store.state.userLat,
+            }
+        },
+		methods: {
+			// configure Swiper
+			configureSwiper() {
+				const swiper = new Swiper('.swiper', {
+					// * Optional parameters
+					slidesPerView: 1,
+					spaceBetween: 0,
+					//direction: 'vertical',
+					loop: true,
+					// * Navigation arrows
+					navigation: {
+						nextEl: '.swiper-button-next',
+						prevEl: '.swiper-button-prev',
+					},
+					// * Responsive breakpoints
+					breakpoints: {
+						// when window width is >= XXXpx
+						576: {
+							slidesPerView: 2,
+							spaceBetween: 16
+						},
+						992: {
+							slidesPerView: 3,
+							spaceBetween: 16
+						}
+					}
+				})
+			},
+			// generate Map
+			generateUserMap(lat,long) {
+				var map = L.map('map').setView([lat,long], 13)
+				L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					maxZoom: 19,
+					attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+				}).addTo(map)
 			}
 		},
 		mounted: function() {
 			console.log('mounted:serice-area')
-			// SWIPER
-			const swiper = new Swiper('.swiper', {
-				// * Optional parameters
-				slidesPerView: 1,
-				spaceBetween: 0,
-				//direction: 'vertical',
-				loop: true,
-				// * Navigation arrows
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-				// * Responsive breakpoints
-				breakpoints: {
-					// when window width is >= XXXpx
-					576: {
-						slidesPerView: 2,
-						spaceBetween: 16
-					},
-					992: {
-						slidesPerView: 3,
-						spaceBetween: 16
-					}
-				}
-			})
 		}
 	}
 </script>

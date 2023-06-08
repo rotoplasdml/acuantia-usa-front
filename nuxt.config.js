@@ -17,6 +17,11 @@ export default {
 				rel: 'stylesheet',
 				href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'
 			},
+			{ 
+				rel: 'stylesheet', 
+				href: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' 
+			},
+
 			{
 				rel: 'stylesheet',
 				href: '/css/styles.css'
@@ -26,7 +31,11 @@ export default {
 			{
 				src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js',
 				type: 'text/javascript'
-			}
+			},
+			{ 
+				src: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+				type: 'text/javascript'
+			},
 		]
 	},
 

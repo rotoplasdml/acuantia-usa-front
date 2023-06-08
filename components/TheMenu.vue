@@ -69,7 +69,7 @@
 				</li>
 				<li class="nav-item mx-xl-1">
 					<NuxtLink class="nav-link" to="/">
-						{{ this.$store.state.userCity }}, {{ this.$store.state.userState }}
+						{{ this.$store.state.userLat }}, {{ this.$store.state.userLong }}
 					</NuxtLink>
 				</li>
 			</ul>

@@ -4,7 +4,6 @@ export const state = () => ({
     userLong: null,
     userCity: 'Hopkins',
     userState: 'TX',
-    ip: '',
 })
 
 export const mutations = {
