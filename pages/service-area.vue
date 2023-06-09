@@ -3,7 +3,7 @@
 		<!-- header -->
 		<div id="header" class="row align-items-center">
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6  offset-lg-0 | col-xl-3 offset-xl-1 | p-3">
-				<h2 class="mb-3 extra-bold fs-1">We've got you Covered in {{this.$store.state.userLat}}</h2>
+				<h2 class="mb-3 extra-bold fs-1">We've got you Covered in <!-- {{this.$store.state.userLat}} --></h2>
 				<p class="my-3">Talk to a Local Expert:</p>
 				<a class="ac-btn my-3 hvr-forward" href="">
 					Submit Your Project
@@ -110,6 +110,12 @@
 	//import { mapState } from "vuex"
 	export default {
 		name: 'service-area',
+		watch: {
+			$route() {
+				console.log('Cambio URL')
+				this.urlChange()
+			}
+		},
 		head() {
 			return {
 				title: 'Service Area | Acuantia',
@@ -130,10 +136,50 @@
 		},
 		data() {
             return {
-				//userLat: this.$store.state.userLat,
-            }
+				userLat: null,
+				userLong: null,
+				userPos: null,
+			}
         },
 		methods: {
+			// url change
+			urlChange() {
+				console.log('Cambio URL')
+				
+			},
+			// getting the location
+			getUserLocation() {
+				console.log('f:getUserLocation')
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(this.storePosition)
+				} else {
+					alert("Geolocation is not supported by this browser.")
+				}
+			},
+			// store the location
+			storePosition(position) {
+				console.log('f:storePosition')
+				localStorage.setItem("usrLt", position.coords.latitude)
+				localStorage.setItem("usrLn", position.coords.longitude)
+				this.userLat = localStorage.getItem('usrLt')
+				this.userLong = localStorage.getItem('usrLn')
+				//console.log('f:storePosition:lat:' + this.userLat + 'long:' + this.userLong)
+				this.getUserReverseLocation()
+			},
+			// set Lat Long from localStorage
+			setLatLongFromLS() {
+				this.userLat = localStorage.getItem('usrLt')
+				this.userLong = localStorage.getItem('usrLn')
+			},
+			// getting the reverse geolocation
+			async getUserReverseLocation() {
+				console.log('f:getUserReverseLocation')
+				var pos = await this.$axios.$get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+ this.userLat + '&longitude=' + this.userLong)
+				console.log('f:getUserReverseLocation:' + pos.city)
+				localStorage.setItem("usrPs", JSON.stringify(pos))
+				this.userPos = localStorage.getItem('usrPs')
+				console.log('f:getUserReverseLocation:' + JSON.parse(this.userPos))
+			},
 			// configure Swiper
 			configureSwiper() {
 				const swiper = new Swiper('.swiper', {
@@ -162,16 +208,69 @@
 				})
 			},
 			// generate Map
-			generateUserMap(lat,long) {
-				var map = L.map('map').setView([lat,long], 13)
+			generateUserMap() {
+				console.log('f:generateUserMap')
+
+				if ( (this.userLat === null && this.userLong === null) ) {
+
+					console.log('sa:variables:nulas')
+					if (!localStorage.getItem('usrLt') && !localStorage.getItem('usrLn')) {
+						console.log('sa:no:localstore')
+						this.getUserLocation()
+					} else {
+						console.log('si localstore')
+						this.setLatLongFromLS()
+					}
+
+				}
+
+				var map = L.map('map').setView([this.userLat,this.userLong], 13)
 				L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 					maxZoom: 19,
 					attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 				}).addTo(map)
-			}
+			},
+			
 		},
 		mounted: function() {
-			console.log('mounted:serice-area')
+			console.log('service-area:mounted')
+			// verify vars and localstorage
+			/* if ( (this.userLat === null && this.userLong === null) ) {
+				console.log('sa:variables:nulas')
+				if (!localStorage.getItem('usrLt') && !localStorage.getItem('usrLn')) {
+					console.log('sa:no:localstore')
+					this.getUserLocation()
+				} else {
+					console.log('si localstore')
+					this.setLatLongFromLS()
+				}
+			} */
+			// create the user map
+			//this.generateUserMap()
+
+			/* if ($nuxt.$route.name.includes('service-area')) {
+				console.log('service-area')
+			} else {
+				console.log('!service-area')
+			} */
+
+			if ($nuxt.$route.name.includes('service-area')) {
+				console.log('service-area')
+
+				// verify vars and localstorage
+				if ( (this.userLat === null && this.userLong === null) ) {
+					console.log('variables nulas')
+					if (!localStorage.getItem('usrLt') && !localStorage.getItem('usrLn')) {
+						console.log('no localstore')
+						this.getUserLocation()
+					} else {
+						console.log('si localstore')
+						this.setLatLongFromLS()
+					}
+				}
+
+				this.generateUserMap()
+			}
 		}
 	}
 </script>

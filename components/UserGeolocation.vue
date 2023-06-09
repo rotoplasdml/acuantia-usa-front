@@ -22,6 +22,12 @@
 	import axios from 'axios'
 	export default {
 		name: 'default',
+		/* watch: {
+			$route() {
+				console.log('Cambio URL')
+				this.urlChange()
+			}
+		}, */
 		data() {
 			return {
 				userLat: null,
@@ -30,6 +36,17 @@
 			}
 		},
 		methods: {
+			// url change
+			/* urlChange() {
+				console.log('Cambio URL')
+				if ($nuxt.$route.name.includes('service-area')) {
+					console.log('service-area')
+				} else {
+					console.log('!service-area')
+
+					
+				}
+			}, */
 			// getting the location
 			getUserLocation() {
 				console.log('f:getUserLocation')
@@ -42,37 +59,42 @@
 			// store the location
 			storePosition(position) {
 				console.log('f:storePosition')
-
 				localStorage.setItem("usrLt", position.coords.latitude)
 				localStorage.setItem("usrLn", position.coords.longitude)
-
 				this.userLat = localStorage.getItem('usrLt')
 				this.userLong = localStorage.getItem('usrLn')
-
-				console.log('f:storePosition:lat:' + this.userLat + 'long:' + this.userLong)
-				
+				//console.log('f:storePosition:lat:' + this.userLat + 'long:' + this.userLong)
 				this.getUserReverseLocation()
+			},
+			// set Lat Long from localStorage
+			setLatLongFromLS() {
+				this.userLat = localStorage.getItem('usrLt')
+				this.userLong = localStorage.getItem('usrLn')
 			},
 			// getting the reverse geolocation
 			async getUserReverseLocation() {
 				console.log('f:getUserReverseLocation')
-
 				var pos = await this.$axios.$get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+ this.userLat + '&longitude=' + this.userLong)
-
 				console.log('f:getUserReverseLocation:' + pos.city)
-
 				localStorage.setItem("usrPs", JSON.stringify(pos))
-
 				this.userPos = localStorage.getItem('usrPs')
-
 				console.log('f:getUserReverseLocation:' + JSON.parse(this.userPos))
 			}
 		},
 		mounted: function() {
 			console.log('default:mounted')
-			if (this.userLat === null && this.userLong === null) {
-				this.getUserLocation()
-			}
+
+			// verify vars and localstorage
+			if ( (this.userLat === null && this.userLong === null) ) {
+						console.log('variables nulas')
+						if (!localStorage.getItem('usrLt') && !localStorage.getItem('usrLn')) {
+							console.log('no localstore')
+							this.getUserLocation()
+						} else {
+							console.log('si localstore')
+							this.setLatLongFromLS()
+						}
+					}
 		}
 	}
 </script>
