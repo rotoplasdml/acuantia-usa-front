@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<UserGeolocation />
+		<!-- <UserGeolocation /> -->
 		<TheMenu />
 			<Nuxt />
 		<TheFooter />

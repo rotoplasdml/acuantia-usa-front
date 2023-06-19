@@ -7,14 +7,14 @@
 				<p class="my-3">Acuantia is a contraction of the Latin words aqua and abundantia.</p>
 				<p class="my-3">Acuantia is synonymous with water quality and quantity. It is well-being in the form of water solutions.</p>
 				<p class="my-3">Acuantia, water in abundance.</p>
-				<a class="ac-btn my-3 hvr-forward" href="">
+				<NuxtLink class="ac-btn my-3 hvr-forward" to="/submit-your-project">
 					Get a FREE Consultation
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 						<path class="st0" d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z"/>
 						<path class="st0" d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2
 						l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z"/>
 					</svg>
-				</a>
+				</NuxtLink>
 			</div>
 			<div class="col-12 | col-sm-12 offset-sm-0 | col-lg-6 offset-lg-1 | col-xl-6 offset-xl-1 | p-0">
 				<img class="w-100" src="~/assets/images/about-us/company/header.jpg" alt="Image">
@@ -94,9 +94,9 @@
 			</div>
 			<!-- btn -->
 			<div class="col-12 text-center mt-3 pt-3">
-				<a class="ac-btn ac-btn-blue mt-3 hvr-float" href="">
+				<NuxtLink class="ac-btn ac-btn-blue mt-3 hvr-float" to="">
 					View All Blogs
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 		<!-- reasons -->
@@ -107,13 +107,13 @@
 			</div>
 			<!-- btn -->
 			<div class="col-12 text-center">
-				<a class="ac-btn mt-3 hvr-forward" href="">
+				<NuxtLink class="ac-btn mt-3 hvr-forward" to="">
 					See Open Positions
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
 						<path class="st0" d="M15,15c-3.8,0-7-3.1-7-6.9c0-3.1,3.1-6.9,7-6.9c3.8,0,7,3.8,7,6.9C22,11.9,18.8,15,15,15z M15,3.9c-2.3,0-4.2,1.9-4.2,4.1c0,2.3,1.9,4.5,4.2,4.5c2.3,0,4.2-2.2,4.2-4.5C19.2,5.8,17.3,3.9,15,3.9z"/>
 						<path class="st1" d="M20.6,17.8H15h-1H9.4c-3.8,0-7,3.1-7,6.9v2.8c0,1,0.6,1.4,1.4,1.4s1.4-0.4,1.4-1.4v-2.8c0-2.3,1.9-4.2,4.2-4.2H14h1h5.6c2.3,0,4.2,1.9,4.2,4.2v2.8c0,1,0.6,1.4,1.4,1.4s1.4-0.4,1.4-1.4v-2.8C27.5,20.9,24.4,17.8,20.6,17.8z"/>
 					</svg>
-				</a>
+				</NuxtLink>
 			</div>
 			<div class="col-12 offset-0 | col-md-8 offset-md-2 | text-white text-center light mt-3 pt-3">
 				<h2 class="extra-bold fs-1 mb-3">Customer testimonials</h2>

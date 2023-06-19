@@ -22,8 +22,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 | col-md-6 | col-lg-7">
-				Form
+			<div class="col-12 | col-md-6 | col-lg-7 | d-flex justify-content-center align-items-center">
+				<h3>Form</h3>
 			</div>
 		</div>
 	</div>

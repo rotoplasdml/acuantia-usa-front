@@ -6,7 +6,7 @@
 				<img class="my-2 me-2" src="~/assets/images/become-a-partner/head-icon.svg" alt="Icon" title="For my home" style="width: 120px;">
 				<h2 class="mb-3 extra-bold fs-1">Become a partner</h2>
 				<p class="my-3">We help homeowners solve their septic needs in our seamless, cost-effective, One Stop Shop Process. Choose Acuantia for your first & last stop for everything septic.</p>
-				<a class="ac-btn my-3 hvr-forward" href="">
+				<a class="ac-btn my-3 hvr-forward" href="#form">
 					Talk to An Expert Today
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 						<path class="st0" d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z"/>
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<!-- form -->
-		<div class="row bg-ac4">
+		<div id="form" class="row bg-ac4">
 			<div class="col-12 | col-md-7 | p-0">
 				<div id="form-text" class="p-3">
 					<h2 class="extra-bold fs-1 ac-1 my-3">Partner with Acuantia and grow your septic business!</h2>
@@ -69,7 +69,7 @@
 				</div>
 				<img class="w-100" src="~/assets/images/become-a-partner/partner.jpg" alt="image">
 			</div>
-			<div class="col-12 | col-md-5 | bg-ac1 text-white text-center">
+			<div class="col-12 | col-md-5 | bg-ac1 text-white d-flex justify-content-center align-items-center">
 				Form
 			</div>
 		</div>

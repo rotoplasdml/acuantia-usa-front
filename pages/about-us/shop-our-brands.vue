@@ -7,40 +7,40 @@
 				<p>Click a logo below to learn more.</p>
 			</div>
 			<div class="col-12 offset-0 | col-md-6 offset-0 | col-lg-4 offset-lg-2 | col-xl-3 offset-xl-3 | text-center p-3 h-100">
-				<NuxtLink class="hvr-float" to="">
+				<a class="hvr-float" href="https://www.tank-depot.com/" target="_blank">
 					<div>
 						<img class="mb-3 w-auto" src="~/assets/images/about-us/shop-our-brands/logo-thetankdepot.jpg" alt="Logo">
 					</div>
-						<p class="bold fs-5">The Largest Selection of Tanks</p>
-						<p>Quality Service, Unbeatable Pricing, Fast shiping.</p>
-				</NuxtLink>
+					<p class="bold fs-5">The Largest Selection of Tanks</p>
+					<p>Quality Service, Unbeatable Pricing, Fast shiping.</p>
+				</a>
 			</div>
 			<div class="col-12 offset-0 | col-md-6 offset-0 | col-lg-4 offset-lg-0 | col-xl-3 offset-xl-0 | text-center p-3 h-100">
-				<NuxtLink class="hvr-float" to="">
+				<a class="hvr-float" href="https://biorock.com/" target="_blank">
 					<div>
 						<img class="mb-3 w-auto" src="~/assets/images/about-us/shop-our-brands/logo-biorock.jpg" alt="Logo">
 					</div>
-						<p class="bold fs-5">Septic That Saves The World</p>
-						<p>The best choice in green innovation for septic tanks.</p>
-				</NuxtLink>
+					<p class="bold fs-5">Septic That Saves The World</p>
+					<p>The best choice in green innovation for septic tanks.</p>
+				</a>
 			</div>
 			<div class="col-12 offset-0 | col-md-6 offset-0 | col-lg-4 offset-lg-2 | col-xl-3 offset-xl-3 | text-center p-3 h-100">
-				<NuxtLink class="hvr-float" to="">
+				<a class="hvr-float" href="https://www.plastic-mart.com/" target="_blank">
 					<div>
 						<img class="mb-3 w-auto" src="~/assets/images/about-us/shop-our-brands/logo-plasti-mart.jpg" alt="Logo">
 					</div>
-						<p class="bold fs-5">The best Online Choice for plastic tanks</p>
-						<p>Large distribution of rotationally molded tanks.</p>
-				</NuxtLink>
+					<p class="bold fs-5">The best Online Choice for plastic tanks</p>
+					<p>Large distribution of rotationally molded tanks.</p>
+				</a>
 			</div>
 			<div class="col-12 offset-0 | col-md-6 offset-0 | col-lg-4 offset-lg-0 | col-xl-3 offset-xl-0 | text-center p-3 h-100">
-				<NuxtLink class="hvr-float" to="">
+				<a class="hvr-float" href="https://rotoplas.com.mx/" target="_blank">
 					<div>
 						<img class="mb-3 w-auto" src="~/assets/images/about-us/shop-our-brands/logo-rotoplas.jpg" alt="Logo">
 					</div>
 						<p class="bold fs-5">Our Parent Company</p>
 						<p>A global leader for sustainable water solutions.</p>
-				</NuxtLink>
+				</a>
 			</div>
 		</div>
 	</div>

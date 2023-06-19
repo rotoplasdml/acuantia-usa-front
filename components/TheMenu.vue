@@ -47,9 +47,11 @@
 							<li>
 								<NuxtLink class="dropdown-item" to="/about-us/company">Company</NuxtLink>
 							</li>
+							<!--  
 							<li>
 								<NuxtLink class="dropdown-item" to="/about-us/blog">Blog</NuxtLink>
 							</li>
+							-->
 							<li>
 								<NuxtLink class="dropdown-item" to="/about-us/contact-us">Contact Us</NuxtLink>
 							</li>
@@ -62,19 +64,19 @@
 						</ul>
 					</li>
 					<li class="nav-item mx-xl-1">
-						<!-- <a v-if="this.userServiceArea == 1" :href="'tel:' + this.userServiceAreaPhone" class="nav-link menu-dinamyc-phone">
+						<a v-if="this.userServiceArea == 1" :href="'tel:' + this.userServiceAreaPhone" class="nav-link menu-dinamyc-phone">
 							<img src="~/assets/images/common/icon-menu-phone.svg" alt="Icon" title="Phone">
 							{{ this.userServiceAreaPhone }}
 						</a>
 						<a v-else href="tel:123456789" class="nav-link menu-dinamyc-phone">
 							<img src="~/assets/images/common/icon-menu-phone.svg" alt="Icon" title="Phone">
 							123456789
-						</a> -->
+						</a>
 					</li>
 					<li class="nav-item mx-xl-1">
-						<!-- <div v-if="this.userServiceArea == 1" class="text-white">
+						<div v-if="this.userServiceArea == 1" class="text-white">
 							{{ this.userCity }}, {{ this.userState }}
-						</div> -->
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -92,7 +94,7 @@
 		}, */
 		data() {
 			return {
-				/* userLatitude: null,
+				userLatitude: null,
 				userLongitude: null,
 				//
 				userFullData: null,
@@ -104,7 +106,7 @@
 				//
 				userServiceArea: null,
 				userServiceAreaPhone: null,
-				userServiceAreaServices: null, */
+				userServiceAreaServices: null,
 			}
 		},
 		methods: {
@@ -125,7 +127,7 @@
 		},
 		mounted: function() {
 			console.log('themenu:mounted')
-			//this.$setUserData()
+			this.$setUserData()
 		}
 	}
 </script>

@@ -9,21 +9,18 @@
 				<p>You can choose another location by clicking on the "Change location" button or by changing zip code in the corresponding text box. Also you can turn on the location services on your device.</p>
 			</div>
 		</div>
-		<div class="col-12 text-center my-3 py-3">
-			
-			<div class="input-group">
-				<button class="btn btn-outline-secondary" type="button" id="button-addon1">
-					Change Location
-					<svg class="me-2" style="width: 18px;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
-						<path d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z" class="st0"></path> <path d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z" class="st0"></path>
-					</svg>
-				</button>
-				<input type="text" class="form-control" placeholder="Enter Zip Code" aria-label="Example text with button addon" aria-describedby="button-addon1">
-			</div>
+		<div class="col-12 text-center my-3 py-3 d-flex justify-content-center align-items-center">
+			<button id="change-location-btn" class="btn hvr-forward" type="button">
+				Change Location
+				<svg class="me-2" style="width: 18px;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve">
+					<path d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z" class="st0"></path> <path d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z" class="st0"></path>
+				</svg>
+			</button>
+			<input type="text" class="form-control w-auto" placeholder="Enter Zip Code" aria-label="Example text with button addon" aria-describedby="button-addon1">
 		</div>
 		<!-- btn -->
 		<div class="col-12 text-center">
-			<NuxtLink class="ac-btn my-3 hvr-forward" to="/">
+			<NuxtLink class="ac-btn my-3 hvr-float" to="/">
 				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" xml:space="preserve" class="me-2" style="transform: rotate(180deg);">
 					<path d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z" class="st0"></path> <path d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z" class="st0"></path>
 				</svg>
@@ -114,6 +111,7 @@
 			width: 100%;
 			height: 500px;
 		}
+	/** */
 
 
 	/* ---------------- */
@@ -148,6 +146,16 @@
 			.home-slide img {
 				width: 200px;
 			}
+	/** */
+	
+	#change-location-btn svg {
+		fill: #2b73ff;
+        transition: all ease .3s;
+	}
+	#change-location-btn:hover svg {
+        fill: #242c36;
+    }
+
 </style>
 
 

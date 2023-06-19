@@ -6,14 +6,14 @@
 				<img class="my-2 me-2" src="~/assets/images/services/for-my-home/fmh-icon.svg" alt="Icon" title="For my home" style="width: 120px;">
 				<h2 class="mb-3 extra-bold fs-1">For my home</h2>
 				<p class="my-3">We help homeowners solve their septic needs in our seamless, cost-effective, One Stop Shop Process. Choose Acuantia for your first & last stop for everything septic.</p>
-				<a class="ac-btn my-3 hvr-forward" href="">
+				<NuxtLink class="ac-btn my-3 hvr-forward" to="/submit-your-project">
 					Talk to An Expert Today
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 						<path class="st0" d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z"/>
 						<path class="st0" d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2
 						l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z"/>
 					</svg>
-				</a>
+				</NuxtLink>
 			</div>
 			<div class="col-12 | col-sm-12 offset-sm-0 | col-lg-6 offset-lg-0 | col-xl-7 offset-xl-1 | p-0">
 				<img class="w-100" src="~/assets/images/home/home-header.jpg" alt="Image">
@@ -138,14 +138,14 @@
 			</div>
 			<!-- btn -->
 			<div class="col-12 text-center">
-				<a class="ac-btn mt-3 hvr-forward" href="">
+				<NuxtLink class="ac-btn mt-3 hvr-forward" to="/submit-your-project">
 					Submit Your Project
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 						<path class="st0" d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z"/>
 						<path class="st0" d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2
 						l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z"/>
 					</svg>
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 		<!-- talk -->
@@ -156,14 +156,14 @@
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6 offset-lg-0 | col-xl-4 offset-xl-1 | p-3">
 				<h2 class="extra-bold mb-0">Talk to An Expert Today</h2>
 				<p class="my-3 light">Let us take your septic stress. No matter how large or small, complex or simple, we can handle it and be your guide!</p>
-				<a class="ac-btn mt-3 hvr-forward" href="">
+				<NuxtLink class="ac-btn mt-3 hvr-forward" to="/submit-your-project">
 					Submit Your Project
 					<svg class="ms-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
 						<path class="st0" d="M8,0C3.6,0,0,3.6,0,8c0,4.4,3.6,8,8,8c4.4,0,8-3.6,8-8C16,3.6,12.4,0,8,0z M8,14.5c-3.6,0-6.5-2.9-6.5-6.5c0-3.6,2.9-6.5,6.5-6.5c3.6,0,6.5,2.9,6.5,6.5C14.5,11.6,11.6,14.5,8,14.5z"/>
 						<path class="st0" d="M11.6,7.6c0-0.1-0.1-0.2-0.2-0.2L8.5,4.4c-0.3-0.3-0.7-0.3-1,0c-0.3,0.3-0.3,0.7,0,1l1.7,1.7H5.1c-0.4,0-0.7,0.3-0.7,0.7c0,0.4,0.3,0.7,0.7,0.7h4.1l-1.7,1.7c-0.3,0.3-0.3,0.7,0,1c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2
 						l2.9-2.9c0.1-0.1,0.1-0.1,0.2-0.2C11.7,7.9,11.7,7.7,11.6,7.6z"/>
 					</svg>
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 		<!-- our projects -->
