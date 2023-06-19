@@ -1,7 +1,7 @@
 <template>
 <div>
 	<!-- no service -->
-	<div id="no-service" v-if="this.userServiceArea == 0 /* || this.userServiceArea == null */" class="container-fluid">
+	<div id="no-service" v-if="this.userServiceArea == 0 || this.userServiceArea == null" class="container-fluid">
 		<div class="row">
 			<div class="col-12 offset-0 | col-md-8 offset-md-2 | text-center fs-4">
 				<img class="mb-3" src="~/assets/images/common/icon-no-service.svg" alt="Icon" style="width: 100px;">
