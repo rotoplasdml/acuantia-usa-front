@@ -347,7 +347,7 @@
 	export default {
 		name: 'home',
 		mounted: function() {
-			console.log('home:mounted')
+			console.log('mounted:home')
 			// configuracion del slider
 			const swiper = new Swiper('.swiper', {
 				// * Optional parameters
