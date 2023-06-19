@@ -3,22 +3,22 @@
 /* ============================================================== */
 	@font-face {
 		font-family: 'Point-Light';
-		src: url('fonts/Point/Point-Light.woff2') format('woff2'), url('fonts/Point/Point-Light.woff') format('woff');
+		src: url('fonts/point/Point-Light.woff2') format('woff2'), url('fonts/point/Point-Light.woff') format('woff');
 		font-display: swap;
 	}
 	@font-face {
 		font-family: 'Point-Regular';
-		src: url('fonts/Point/Point-Regular.woff2') format('woff2'), url('fonts/Point/Point-Regular.woff') format('woff');
+		src: url('fonts/point/Point-Regular.woff2') format('woff2'), url('fonts/point/Point-Regular.woff') format('woff');
 		font-display: swap;
 	}
 	@font-face {
 		font-family: 'Point-Bold';
-		src: url('fonts/Point/Point-Bold.woff2') format('woff2'), url('fonts/Point/Point-Bold.woff') format('woff');
+		src: url('fonts/point/Point-Bold.woff2') format('woff2'), url('fonts/point/Point-Bold.woff') format('woff');
 		font-display: swap;
 	}
 	@font-face {
 		font-family: 'Point-ExtraBold';
-		src: url('fonts/Point/Point-ExtraBold.woff2') format('woff2'), url('fonts/Point/Point-ExtraBold.woff') format('woff');
+		src: url('fonts/point/Point-ExtraBold.woff2') format('woff2'), url('fonts/point/Point-ExtraBold.woff') format('woff');
 		font-display: swap;
 	}
 
