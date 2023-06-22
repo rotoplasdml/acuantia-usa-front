@@ -37,6 +37,102 @@
 				<div class="row">
 					<div class="col-12 | col-md-10 offset-1 | text-center">
 						<h3 class="extra-bold fs-3">Get a call from our septic experts</h3>
+
+
+
+						<form id="contact-us-form" @submit.prevent="sendForm" method="post">
+								<input name="__RequestVerificationToken" type="hidden" value="iVuJIux5MsbXFf7FGu1AMeUcq0IkGEgcoUDfk3g-rdXOyjdpfbR_nKu7Y4afTAGLt2gRZT1JV7TKyuitLuVGCI3tABdTb1ZEnBK3grt11xg1">                    <div id="form-container" class="form-container is-hidden-touch mt-3 mr-auto mb-0 ml-auto">
+								<h4 class="has-text-white">Get in touch!</h4>
+								<div class="pt-4 pr-4 pb-4 pl-5">
+								<div class="field is-grouped">
+									<div class="control">
+									<label class="label">First Name</label>
+									<input class="input text-box single-line" id="FirstName" name="FirstName" type="text" value="">
+									</div>
+									<div class="control">
+									<label class="label">Last Name</label>
+									<input class="input text-box single-line" id="LastName" name="LastName" type="text" value="">
+									</div>
+								</div>
+								<div class="field is-grouped">
+									<div class="control">
+									<label class="label">Phone Number <span class="field-validation-error text-danger" data-valmsg-for="Phone" data-valmsg-replace="true">required</span></label>
+									<input class="input-validation-error input text-box single-line" data-val="true" data-val-required="required" id="Phone" name="Phone" type="text" value="">
+									</div>
+									<div class="control">
+									<label class="label">Email Address <span class="field-validation-error text-danger" data-valmsg-for="Email" data-valmsg-replace="true">required</span></label>
+									<input class="input-validation-error input text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="required" id="Email" name="Email" type="email" value="">
+									</div>
+								</div>
+								<div class="field is-grouped">
+									<div class="control">
+										<label class="label">Zip Code <span class="field-validation-error text-danger" data-valmsg-for="PostalCode" data-valmsg-replace="true">required</span></label>
+										<input class="input-validation-error input text-box single-line" data-val="true" data-val-required="required" id="PostalCode" name="PostalCode" type="text" value="">
+									</div>
+								</div>
+
+									<p class="label pt-3">Septic Services Needed</p>
+									<div class="is-flex checkbox-container">
+										<div class="">
+											<div class="field">
+													<div class="control check">
+														<label class="checkbox is-flex is-align-items-center">
+														<input type="checkbox" name="ServicesNeeded" value="Site &amp; Soil Evaluation"> <span>Site &amp; Soil Evaluation</span>
+														</label>
+													</div>
+													<div class="control check">
+														<label class="checkbox is-flex is-align-items-center">
+														<input type="checkbox" name="ServicesNeeded" value="System Design"> <span>System Design</span>
+														</label>
+													</div>
+													<div class="control check">
+														<label class="checkbox is-flex is-align-items-center">
+														<input type="checkbox" name="ServicesNeeded" value="Installation"> <span>Installation</span>
+														</label>
+													</div>
+											</div>
+										</div>
+									<div class="checkbox-column2">
+									<div class="field">
+											<div class="control check">
+												<label class="checkbox is-flex is-align-items-center">
+												<input type="checkbox" name="ServicesNeeded" value="Maintenance"> <span>Maintenance</span>
+												</label>
+											</div>
+											<div class="control check">
+												<label class="checkbox is-flex is-align-items-center">
+												<input type="checkbox" name="ServicesNeeded" value="Repair"> <span>Repair</span>
+												</label>
+											</div>
+											<div class="control check">
+												<label class="checkbox is-flex is-align-items-center">
+												<input type="checkbox" name="ServicesNeeded" value="Inspection"> <span>Inspection</span>
+												</label>
+											</div>
+									</div>
+									</div>
+								</div>
+
+								<!-- <div class="field is-grouped is-grouped-right-desktop pb-3">
+									<label class="label"><span class="field-validation-valid text-danger is-size-7" data-valmsg-for="Recaptcha" data-valmsg-replace="true"></span></label>
+									<div class="control">
+									<div class="g-recaptcha" data-sitekey="6LdHTTUcAAAAAL-3uTsDtfYhSnX_YRJzDMrYVCPA"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdHTTUcAAAAAL-3uTsDtfYhSnX_YRJzDMrYVCPA&amp;co=aHR0cHM6Ly9hY3VhbnRpYS5jb206NDQz&amp;hl=es-419&amp;v=SglpK98hSCn2CroR0bKRSJl5&amp;size=normal&amp;cb=4ym6kapp3lhv" width="304" height="78" role="presentation" name="a-5n1rhoxdphc0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+									</div>
+								</div> -->
+
+								<div class="field is-grouped is-grouped-right pb-3">
+									<div class="control">
+									<a id="cancel-form" class="btn-cancel is-hidden-desktop mr-3 button is-background-white has-text-primary">Cancel</a>
+									<button class="btn-submit button is-primary">Submit</button>
+									</div>
+								</div>
+
+								</div>
+							</div>
+						</form>
+
+
+
 					</div>
 				</div>
 			</div>
@@ -195,11 +291,32 @@
 
 
 <script>
+	import axios from 'axios'
 	export default {
 		name: 'contact-us',
 		head() {
 			return {
 				title: 'Contact Us | Acuantia',
+			}
+		},
+		data() {
+			return {
+				//
+			}
+		},
+		methods: {
+			sendForm() {
+				console.log('m:sendForm')
+				var form = document.getElementById('contact-us-form')
+				var params = new FormData(form)
+				console.log('m:sendForm:' + params)
+				axios.post('https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8',params)
+				.then((Response) => {
+					console.log(Response)
+				})
+				.catch((err) => {
+					this.errors.push(err)
+				})
 			}
 		}
 	}

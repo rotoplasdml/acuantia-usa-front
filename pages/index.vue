@@ -1,5 +1,6 @@
 <template>
 	<div class="container-fluid">
+		<!-- <div class="text-center w-100">{{ nuxtChildKey }}</div> -->
 		<!-- header -->
 		<div id="header" class="row bg-ac2 align-items-center">
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6  offset-lg-0 | col-xl-4 offset-xl-1 | p-3 text-white">
@@ -222,8 +223,8 @@
 				</ul>
 			</div>
 			<!-- app -->
-			<div class="col-12 offset-0 | col-sm-10 offset-sm-1 | col-md-5 offset-md-0 | col-xl-4 offset-xl-2 | p-3 bg-ac3">
-				App
+			<div class="col-12 offset-0 | col-sm-10 offset-sm-1 | col-md-5 offset-md-0 | col-xl-4 offset-xl-2 | p-3">
+				<iframe id="hearth-widget_calculator_v1" frameborder="0" width="320" height="771" scrolling="no"></iframe>
 			</div>
 		</div>
 	</div>
@@ -346,8 +347,11 @@
 <script>
 	export default {
 		name: 'home',
+		props: [
+			//'nuxtChildKey'
+		],
 		mounted: function() {
-			console.log('mounted:home')
+			console.log('home:mounted')
 			// configuracion del slider
 			const swiper = new Swiper('.swiper', {
 				// * Optional parameters

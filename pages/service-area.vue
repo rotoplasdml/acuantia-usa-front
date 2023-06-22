@@ -1,7 +1,8 @@
 <template>
 <div>
+	<div> {{ 'TEST:' + userServiceArea }} </div>
 	<!-- no service -->
-	<div id="no-service" v-if="this.userServiceArea == 0 || this.userServiceArea == null" class="container-fluid">
+	<div id="no-service" v-if="userServiceArea == 0 || userServiceArea == null" class="container-fluid">
 		<div class="row">
 			<div class="col-12 offset-0 | col-md-8 offset-md-2 | text-center fs-4">
 				<img class="mb-3" src="~/assets/images/common/icon-no-service.svg" alt="Icon" style="width: 100px;">
@@ -30,7 +31,6 @@
 	</div>
 	<!-- service -->
 	<div v-else class="container-fluid">
-		<!-- <UserGeolocation @senduserdataservicearea="captureData"/> -->
 		<!-- header -->
 		<div id="header" class="row align-items-center">
 			<div class="col-12 | col-md-8 offset-md-2 | col-lg-6  offset-lg-0 | col-xl-3 offset-xl-1 | p-3">
@@ -160,12 +160,11 @@
 
 
 <script>
-	import UserGeolocation from '~/components/UserGeolocation.vue'
 	export default {
     name: "service-area",
-	/* components: {
-		UserGeolocation
-	}, */
+	props: [
+		'userServiceArea',
+	],
     head() {
         return {
             title: "Service Area | Acuantia",
@@ -182,43 +181,8 @@
             ]
         };
     },
-    data() {
-        return {
-			userLatitude: null,
-				userLongitude: null,
-				//
-				userFullData: null,
-				userCountry: null,
-				userCity: null,
-				userLocality: null,
-				userZipcode: null,
-				userState: null,
-				//
-				userServiceArea: null,
-				userServiceAreaPhone: null,
-				userServiceAreaServices: null,
-        }
-    },
-    methods: {
-		/* captureData(mess) {
-			console.log('m' + mess.userLatitude)
-			this.userLatitude = mess.userLatitude
-			this.userLongitude = mess.userLongitude
-			this.userFullData = mess.userFullData
-			this.userCountry = mess.userCountry
-			this.userCity = mess.userCity
-			this.userLocality = mess.userLocality
-			this.userZipcode = mess.userZipcode
-			this.userState = mess.userState
-			this.userServiceArea = mess.userServiceArea
-			this.userServiceAreaPhone = mess.userServiceAreaPhone
-			this.userServiceAreaServices = mess.userServiceAreaServices
-			
-		}, */
-    },
     mounted: function () {
         console.log("service-area:mounted")
-		//this.$generateUserMap()
     }
 }
 </script>

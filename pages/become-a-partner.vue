@@ -70,7 +70,59 @@
 				<img class="w-100" src="~/assets/images/become-a-partner/partner.jpg" alt="image">
 			</div>
 			<div class="col-12 | col-md-5 | bg-ac1 text-white d-flex justify-content-center align-items-center">
-				Form
+				
+				
+				<form action="/partner" method="post">
+					<input name="__RequestVerificationToken" type="hidden" value="ylQ8ch9c59HYeeUxtcWAgF3IG1vfz_jyszMKEfmH-VU6uG_raiM7ReYgfChxJGQnjQ2tiSYq0aJfFSzYzyzfQTH6ECa4PzzI4-I8jjU9lPc1">
+
+					<h4 class="has-text-white">Services provided</h4>
+					<label class="label">First Name</label>
+					<input class="input text-box single-line" id="FirstName" name="FirstName" type="text" value="">
+						
+					<label class="label">Last Name</label>
+					<input class="input text-box single-line" id="LastName" name="LastName" type="text" value="">
+
+					<label class="label">Phone Number <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span></label>
+					<input class="input text-box single-line" data-val="true" data-val-required="required" id="Phone" name="Phone" type="text" value="">
+
+					<label class="label">Email Address <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span></label>
+					<input class="input text-box single-line" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="required" id="Email" name="Email" type="email" value="">
+
+					<p>Septic services you can supply</p>
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="Site &amp; Soil Evaluation"> <span>Site &amp; Soil Evaluation</span>
+					</label>
+					
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="System Design"> <span>System Design</span>
+					</label>
+					
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="Installation"> <span>Installation</span>
+					</label>
+					
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="Maintenance"> <span>Maintenance</span>
+					</label>
+					
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="Pumping"> <span>Pumping</span>
+					</label>
+					
+					<label class="checkbox is-flex is-align-items-center">
+					<input type="checkbox" name="ServicesNeeded" value="Inspection"> <span>Inspection</span>
+					</label>
+
+					<label class="label">Please share more detail on your expertise including states and counties where you work <span class="field-validation-valid text-danger" data-valmsg-for="ProjectDescription" data-valmsg-replace="true"></span></label>
+					<textarea class="textarea" cols="20" data-val="true" data-val-length="Over max characters" data-val-length-max="256" id="ProjectDescription" name="ProjectDescription" placeholder="Share more detail (Optional)" rows="2"></textarea>
+					<p class="has-text-right is-size-7 input-label">Max 256 characters</p>
+
+					<button>Submit</button>
+				</form>
+
+
+
+				
 			</div>
 		</div>
 	</div>
