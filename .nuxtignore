@@ -1,0 +1,5 @@
+# ignore page bar.vue
+pages/test.vue
+
+# ignore page inside ignore folder
+pages/test/*.vue
