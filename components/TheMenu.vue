@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="text-center w-100">{{ 'MENU 1:' + userCity + ' 2:' + userState + ' userServiceArea:' + userServiceArea }}</div>
+	<div class="text-center w-100">{{ 'MENU: userCountySeat: ' + userCountySeat + ' userServiceArea: ' + userServiceArea }}</div>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-ac1 px-3">
 		<NuxtLink class="navbar-brand" to="/">
 			<img id="nav-logo" src="~/assets/images/common/acuantia-logo-negative.svg" alt="Acuantia Logo" title="Acuantia">
@@ -64,9 +64,9 @@
 				</li>
 				<li class="nav-item mx-xl-1">
 					<!-- Dinamic Phone -->
-					<a v-if="userServiceArea == 1" :href="'tel:' + userServiceAreaPhone" class="nav-link menu-dinamyc-phone">
+					<a v-if="userServiceArea == 1" :href="'tel:'" class="nav-link menu-dinamyc-phone">
 						<img src="~/assets/images/common/icon-menu-phone.svg" alt="Icon" title="Phone">
-						{{ this.userServiceAreaPhone }}
+						<!-- {{ this.userServiceAreaPhone }} -->
 					</a>
 					<!-- Default Btn -->
 					<a v-else href="tel:123456789" class="nav-link menu-dinamyc-phone">
@@ -74,9 +74,9 @@
 						123456789
 					</a>
 				</li>
-				<li class="nav-item mx-xl-1">
+				<li class="nav-item my-2 mx-xl-1 d-flex justify-content-center align-items-center">
 					<div v-if="userServiceArea == 1" class="text-white">
-						{{ userCity }}, {{ userState }}
+						{{ userCountySeat }}
 					</div>
 				</li>
 			</ul>
@@ -90,10 +90,8 @@
 	export default {
 		name: 'TheMenu',
 		props: [
-			'userCity',
-			'userState',
+			'userCountySeat',
 			'userServiceArea',
-			'userServiceAreaPhone',
 		],
 		mounted: function() {
 			console.log('themenu:mounted')

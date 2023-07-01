@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row my-3 py-3">
-            <div class="col-6 offset-1">
+            <div class="col-12 order-2 | col-md-7 order-md-1 | col-lg-6 offset-lg-1">
                 <h1 class="mb-3">{{ post.data[0].attributes.title }}</h1>                
                 <div v-html="$md.render(post.data[0].attributes.body)"></div>
                 <!-- Sharing -->
@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-12 order-1 | col-md-5 order-md-2 | col-lg-4">
                 <img class="w-100 mb-3" :src="'http://localhost:1337' + post.data[0].attributes.main_image.data.attributes.formats.small.url" alt="Imagen" :title="post.data[0].attributes.main_image.data.attributes.caption">
             </div>
         </div>

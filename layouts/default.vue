@@ -4,11 +4,12 @@
 
 		<TheMenu
 			v-bind:user-service-area="userServiceArea"
-			v-bind:user-city="userCity"
-			v-bind:user-state="userState"
+			v-bind:user-county-seat="userCountySeat"
 		/>
 		<nuxt-child 
 			v-bind:user-service-area="userServiceArea"
+			v-bind:user-latitude="userLatitude"
+			v-bind:user-longitude="userLongitude"
 		/>
 		<TheFooter />
 	</div>
@@ -39,6 +40,9 @@
 				userServiceArea: null,
 				userServiceAreaPhone: null,
 				userServiceAreaServices: null,
+				//
+				userStrapiInfo: null,
+				userCountySeat: null,
 			}
 		},
 		methods: {
@@ -48,39 +52,49 @@
 				});
 			},
 			async main() {
-				var position = await this.getPosition();
-				localStorage.setItem('userLatitude' , position.coords.latitude)
-				this.userLatitude = localStorage.getItem('userLatitude')
+				// obtain the user geolocation
+				var position = await this.getPosition()
+				this.userLatitude = position.coords.latitude
+				this.userLongitude = position.coords.longitude
 
-				localStorage.setItem('userLongitude' , position.coords.longitude)
-				this.userLongitude = localStorage.getItem('userLongitude')
+				// whit geolocation get reverse info from Big Data Cloud
+				const responseBigDataCloud = await axios.get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+ this.userLatitude + '&longitude=' + this.userLongitude)
+				console.log(responseBigDataCloud.data)
 
-				const responseAxios = await axios.get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+ this.userLatitude + '&longitude=' + this.userLongitude)
-				console.log(responseAxios.data)
+				// if get user on US
+				if (responseBigDataCloud.data.countryCode == 'US') {
 
-				if (responseAxios.data.countryCode == 'US') {
+					// check if its an area with service
+					const responseStrapi = await axios.get('http://localhost:1337/api/counties?&filters[$or][0][zipcodes][$containsi]=' + responseBigDataCloud.data.localityInfo.informative[3].name)
+					console.log(responseStrapi.data.data)
 
-					console.log(responseAxios.data.countryCode)
-					localStorage.setItem('userFullData', JSON.stringify(responseAxios.data))
-					localStorage.setItem('userCountry', responseAxios.data.countryCode)
-					localStorage.setItem('userCity', responseAxios.data.city)
-					localStorage.setItem('userLocality', responseAxios.data.locality)
-					localStorage.setItem('userZipcode', responseAxios.data.localityInfo.informative[3].name)
-					localStorage.setItem('userState', responseAxios.data.principalSubdivision)
-					this.userFullData = localStorage.getItem('userFullData')
-					this.userCountry = localStorage.getItem('userCountry')
-					this.userCity = localStorage.getItem('userCity')
-					this.userLocality = localStorage.getItem('userLocality')
-					this.userZipcode = localStorage.getItem('userZipcode')
-					this.userState = localStorage.getItem('userState')
+						// if its an area with service get values an mark service area 1
+						if(responseStrapi.data.data.length == 1) {
 
-					localStorage.setItem('userServiceArea', 1)
-					this.userServiceArea = localStorage.getItem('userServiceArea')
+							// responseBigDataCloud reverse geolocation
+							this.userFullData = JSON.stringify(responseBigDataCloud.data)
+							this.userCountry = responseBigDataCloud.data.countryCode
+							this.userCity = responseBigDataCloud.data.city
+							this.userLocality = responseBigDataCloud.data.locality
+							this.userZipcode = responseBigDataCloud.data.localityInfo.informative[3].name
+							this.userState = responseBigDataCloud.data.principalSubdivision
+
+							// responseStrapi
+							this.userStrapiInfo = JSON.stringify(responseStrapi.data.data[0])
+							this.userCountySeat = responseStrapi.data.data[0].attributes.county_seat
+
+							this.userServiceArea = 1
+
+						// if not a area with service get values an mark service area 0
+						} else {
+
+							this.userServiceArea = 0
+
+						}
 
 				} else {
 
-					localStorage.setItem('userServiceArea', 0)
-					this.userServiceArea = localStorage.getItem('userServiceArea')
+					this.userServiceArea = 0
 
 				}
 			}
