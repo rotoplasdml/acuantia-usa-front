@@ -141,10 +141,6 @@
 	/* ---------------- */
 	/*	Slider
 	/* ---------------- */
-		.swiper {
-			width: 100%;
-		}
-
 		.swiper-button-next,
 		.swiper-button-prev {
 			background-color: transparent;
@@ -167,9 +163,7 @@
 		content: "";
 		}
 
-		.home-slide img {
-			width: 200px;
-		}
+
 	/* ---------------- */
 	/*	Form
 	/* ---------------- */

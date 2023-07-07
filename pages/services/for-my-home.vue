@@ -25,48 +25,10 @@
 				<h2 class="extra-bold fs-1 ac-1 mb-3">Septic Services for My Home</h2>
 			</div>
 			<!-- slider -->
-			<div class="col-12 offset-0 | col-md-10 offset-md-1 | p-3">
-				<!-- Slider main container -->
-				<div class="swiper">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-site-soil.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">Site & Soil Evaluation</h3>
-							<p class="light">We evaluate your site and soils to make sure it can support a repair, expanded, or new septic system.</p>
-						</div>
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-system-design.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">System Design</h3>
-							<p class="light">Our team provides you with septic design options that best fit your site needs, within your budget.</p>
-						</div>
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-installation.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">Installation</h3>
-							<p class="light">We work closely with you to have a septic system installed within budget and in your timeline.</p>
-						</div>
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-site-soil.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">Site & Soil Evaluation</h3>
-							<p class="light">We evaluate your site and soils to make sure it can support a repair, expanded, or new septic system.</p>
-						</div>
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-system-design.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">System Design</h3>
-							<p class="light">Our team provides you with septic design options that best fit your site needs, within your budget.</p>
-						</div>
-						<div class="swiper-slide home-slide text-center p-3">
-							<img class="mb-3" src="~/assets/images/home/home-slider-installation.svg" alt="Image">
-							<h3 class="extra-bold ac-1 mb-3">Installation</h3>
-							<p class="light">We work closely with you to have a septic system installed within budget and in your timeline.</p>
-						</div>
-					</div>
-					<!-- If we need navigation buttons -->
-					<div class="swiper-button-prev"></div>
-					<div class="swiper-button-next"></div>
-				</div>
-			</div>
+			<TheCountyServices 
+				v-bind:user-service-area="userServiceArea"
+				v-bind:county-services="countyServices" 
+			/>
 		</div>
 		<!-- reasons -->
 		<div id="reasons" class="row bg-ac2">
@@ -273,40 +235,6 @@
 
 
 	/* ---------------- */
-	/*	Slider
-	/* ---------------- */
-		.swiper {
-			width: 100%;
-		}
-
-		.swiper-button-next,
-		.swiper-button-prev {
-			background-color: transparent;
-			background-position: center;
-			background-size: 100%;
-			background-repeat: no-repeat;
-			
-		}
-
-		.swiper-button-prev {
-			background-image: url("~assets/images/common/icon-arrow-prev.svg");
-		}
-
-		.swiper-button-next {
-			background-image: url("~assets/images/common/icon-arrow-next.svg");
-		}
-
-		.swiper-button-next::after,
-		.swiper-button-prev::after {
-		content: "";
-		}
-
-		.home-slide img {
-			width: 200px;
-		}
-
-
-	/* ---------------- */
 	/*	Reasons
 	/* ---------------- */
 		#reasons-cards {
@@ -466,34 +394,18 @@
 
 
 <script>
+	import TheCountyServices from '~/components/TheCountyServices.vue'
 	export default {
 		name: 'for-my-home',
+		components: {
+			TheCountyServices
+		},
+		props: [
+			'userServiceArea',
+			'countyServices'
+		],
 		mounted: function() {
 			console.log('mounted')
-			const swiper = new Swiper('.swiper', {
-				// * Optional parameters
-				slidesPerView: 1,
-				spaceBetween: 0,
-				//direction: 'vertical',
-				loop: true,
-				// * Navigation arrows
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
-				// * Responsive breakpoints
-				breakpoints: {
-					// when window width is >= XXXpx
-					576: {
-						slidesPerView: 2,
-						spaceBetween: 16
-					},
-					992: {
-						slidesPerView: 3,
-						spaceBetween: 16
-					}
-				}
-			});
 		},
 		head() {
 			return {

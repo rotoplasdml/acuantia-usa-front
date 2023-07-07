@@ -15,6 +15,7 @@
 							:to="`/about-us/blog/${post.attributes.slug}`">
 								<!-- Image -->
 								<img class="w-100 mb-3" :src="'http://localhost:1337' + post.attributes.main_image.data.attributes.formats.small.url" alt="Imagen" :title="post.attributes.main_image.data.attributes.caption">
+								<!-- <img class="w-100 mb-3" :src="'http://localhost:1337' + post.attributes.main_image.data[0].attributes.formats.small.url" alt="Imagen" :title="post.attributes.main_image.data[0].attributes.caption"> -->
 								<!-- Title -->
 								<h2 class="mb-3">{{ post.attributes.title }}</h2>
 							</NuxtLink>

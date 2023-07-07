@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<!-- <div class="text-center w-100">{{ 'lat:' + this.userCity + ' long:' + this.userState }}</div> -->
-
 		<TheMenu
 			v-bind:user-service-area="userServiceArea"
 			v-bind:user-county-seat="userCountySeat"
@@ -10,6 +9,7 @@
 			v-bind:user-service-area="userServiceArea"
 			v-bind:user-latitude="userLatitude"
 			v-bind:user-longitude="userLongitude"
+			v-bind:county-services="countyServices"
 		/>
 		<TheFooter />
 	</div>
@@ -38,11 +38,10 @@
 				userZipcode: null,
 				userState: null,
 				userServiceArea: null,
-				userServiceAreaPhone: null,
-				userServiceAreaServices: null,
 				//
 				userStrapiInfo: null,
 				userCountySeat: null,
+				countyServices: null,
 			}
 		},
 		methods: {
@@ -78,11 +77,11 @@
 							this.userLocality = responseBigDataCloud.data.locality
 							this.userZipcode = responseBigDataCloud.data.localityInfo.informative[3].name
 							this.userState = responseBigDataCloud.data.principalSubdivision
-
 							// responseStrapi
 							this.userStrapiInfo = JSON.stringify(responseStrapi.data.data[0])
 							this.userCountySeat = responseStrapi.data.data[0].attributes.county_seat
-
+							this.countyServices = responseStrapi.data.data[0].attributes.county_services
+							// service area
 							this.userServiceArea = 1
 
 						// if not a area with service get values an mark service area 0
@@ -101,6 +100,14 @@
 		},
 		mounted: function () {
 			this.main()
+		},
+		watch: {
+			$route (to, from) {
+				//console.log('Route changed', from, 'to', to)
+			}
 		}
 	}
 </script>
+
+
+<style></style>

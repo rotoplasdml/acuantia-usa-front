@@ -152,3 +152,16 @@ a {
         border-color: #cb2320;
     }
 /** */
+
+/* ---------------- */
+/*	Slider
+/* ---------------- */
+    .swiper {
+        width: 100%;
+    }
+
+
+    .home-slide img {
+        width: 200px;
+    }
+/** */
