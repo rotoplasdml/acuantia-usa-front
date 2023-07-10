@@ -13,7 +13,7 @@
 			<!-- Additional required wrapper -->
 			<div class="swiper-wrapper" v-if="( $nuxt.$route.name.includes('index') || $nuxt.$route.name.includes('for-my-home') || $nuxt.$route.name.includes('service-area') ) && userServiceArea == 1">
 				<!-- Slides -->
-				<div class="swiper-slide home-slide text-center p-3" v-for="service in this.countyServices">
+				<div class="swiper-slide home-slide text-center p-3" v-for="service in this.sliderServices">
 					<!-- images -->
 					<img class="mb-3" :src="require(`../assets/images/services-slider/${service}.svg`)" alt="Image">
 					<!-- titles -->
@@ -69,7 +69,7 @@
 		name: 'TheCountyServices',
 		props: [
 			'userServiceArea',
-			'countyServices',
+			'sliderServices',
 		],
 		data() {
 			return {

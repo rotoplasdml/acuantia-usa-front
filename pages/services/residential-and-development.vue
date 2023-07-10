@@ -25,9 +25,9 @@
 				<h2 class="extra-bold fs-1 ac-1 mb-3">Septic Services for Builders</h2>
 			</div>
 			<!-- slider -->
-			<TheCountyServices 
+			<TheSliderServices 
 				v-bind:user-service-area="userServiceArea"
-				v-bind:county-services="countyServices" 
+				v-bind:slider-services="sliderServices" 
 			/>
 		</div>
 		<!-- reasons -->
@@ -231,15 +231,15 @@
 
 
 <script>
-	import TheCountyServices from '~/components/TheCountyServices.vue'
+	import TheSliderServices from '~/components/TheSliderServices.vue'
 	export default {
 		name: 'residential-and-development',
 		components: {
-			TheCountyServices
+			TheSliderServices
 		},
 		props: [
 			'userServiceArea',
-			'countyServices'
+			'sliderServices'
 		],
 		mounted: function() {
 			console.log('mounted')

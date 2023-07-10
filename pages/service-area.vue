@@ -56,9 +56,9 @@
 				<h2 class="extra-bold fs-1 ac-1 mb-3">Septic Services in Your Area</h2>
 			</div>
 			<!-- slider -->
-			<TheCountyServices 
+			<TheSliderServices 
 				v-bind:user-service-area="userServiceArea"
-				v-bind:county-services="countyServices" 
+				v-bind:slider-services="sliderServices" 
 			/>
 		</div>
 	</div>
@@ -97,18 +97,18 @@
 
 
 <script>
-	import TheCountyServices from '~/components/TheCountyServices.vue'
+	import TheSliderServices from '~/components/TheSliderServices.vue'
 	export default {
     name: "service-area",
 	components: {
-		TheCountyServices
+		TheSliderServices
 	},
 	props: [
 		'userServiceArea',
 		'userLatitude',
 		'userLongitude',
 		'userServiceArea',
-		'countyServices'
+		'sliderServices'
 	],
     head() {
         return {

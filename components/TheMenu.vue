@@ -1,6 +1,6 @@
 <template>
 <div>
-	<div class="text-center w-100">{{ 'MENU: userCountySeat: ' + userCountySeat + ' userServiceArea: ' + userServiceArea }}</div>
+	<div class="text-center w-100">{{ 'MENU: userLocation: ' + userLocation + ' userServiceArea: ' + userServiceArea }}</div>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-ac1 px-3">
 		<NuxtLink class="navbar-brand" to="/">
 			<img id="nav-logo" src="~/assets/images/common/acuantia-logo-negative.svg" alt="Acuantia Logo" title="Acuantia">
@@ -76,7 +76,7 @@
 				</li>
 				<li class="nav-item my-2 mx-xl-1 d-flex justify-content-center align-items-center">
 					<div v-if="userServiceArea == 1" class="text-white">
-						{{ userCountySeat }}
+						{{ userLocation }}
 					</div>
 				</li>
 			</ul>
@@ -90,7 +90,7 @@
 	export default {
 		name: 'TheMenu',
 		props: [
-			'userCountySeat',
+			'userLocation',
 			'userServiceArea',
 		],
 		mounted: function() {

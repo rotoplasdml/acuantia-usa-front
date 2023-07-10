@@ -3,13 +3,13 @@
 		<!-- <div class="text-center w-100">{{ 'lat:' + this.userCity + ' long:' + this.userState }}</div> -->
 		<TheMenu
 			v-bind:user-service-area="userServiceArea"
-			v-bind:user-county-seat="userCountySeat"
+			v-bind:user-location="userLocation"
 		/>
 		<nuxt-child 
 			v-bind:user-service-area="userServiceArea"
 			v-bind:user-latitude="userLatitude"
 			v-bind:user-longitude="userLongitude"
-			v-bind:county-services="countyServices"
+			v-bind:slider-services="sliderServices"
 		/>
 		<TheFooter />
 	</div>
@@ -32,16 +32,14 @@
 				userLatitude: null,
 				userLongitude: null,
 				userFullData: null,
-				userCountry: null,
-				userCity: null,
-				userLocality: null,
 				userZipcode: null,
-				userState: null,
 				userServiceArea: null,
 				//
 				userStrapiInfo: null,
-				userCountySeat: null,
-				countyServices: null,
+				//userCountySeat: null,
+				//countyServices: null,
+				userLocation: null,
+				sliderServices: null,
 			}
 		},
 		methods: {
@@ -57,38 +55,56 @@
 				this.userLongitude = position.coords.longitude
 
 				// whit geolocation get reverse info from Big Data Cloud
+				console.log('s:reversegeo:lat:'+this.userLatitude+'long:'+this.userLongitude)
 				const responseBigDataCloud = await axios.get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude='+ this.userLatitude + '&longitude=' + this.userLongitude)
+				//const responseBigDataCloud = await axios.get('https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=37.42159&longitude=-122.0837')
 				console.log(responseBigDataCloud.data)
 
 				// if get user on US
 				if (responseBigDataCloud.data.countryCode == 'US') {
 
-					// check if its an area with service
-					const responseStrapi = await axios.get('http://localhost:1337/api/counties?&filters[$or][0][zipcodes][$containsi]=' + responseBigDataCloud.data.localityInfo.informative[3].name)
-					console.log(responseStrapi.data.data)
+					// responseBigDataCloud reverse geolocation
+					this.userFullData = JSON.stringify(responseBigDataCloud.data)
+					this.userCountry = responseBigDataCloud.data.countryCode
+					this.userZipcode = responseBigDataCloud.data.postcode
+
+					// check if its an area with service on a county
+					console.log('s:county')
+					const responseStrapi = await axios.get('http://localhost:1337/api/counties?&filters[$or][0][zipcodes][$containsi]=' + responseBigDataCloud.data.postcode)
 
 						// if its an area with service get values an mark service area 1
 						if(responseStrapi.data.data.length == 1) {
+							console.log(responseStrapi.data.data)
 
-							// responseBigDataCloud reverse geolocation
-							this.userFullData = JSON.stringify(responseBigDataCloud.data)
-							this.userCountry = responseBigDataCloud.data.countryCode
-							this.userCity = responseBigDataCloud.data.city
-							this.userLocality = responseBigDataCloud.data.locality
-							this.userZipcode = responseBigDataCloud.data.localityInfo.informative[3].name
-							this.userState = responseBigDataCloud.data.principalSubdivision
 							// responseStrapi
 							this.userStrapiInfo = JSON.stringify(responseStrapi.data.data[0])
-							this.userCountySeat = responseStrapi.data.data[0].attributes.county_seat
-							this.countyServices = responseStrapi.data.data[0].attributes.county_services
+							this.userLocation = responseStrapi.data.data[0].attributes.city
+							this.sliderServices = responseStrapi.data.data[0].attributes.county_services
 							// service area
 							this.userServiceArea = 1
 
 						// if not a area with service get values an mark service area 0
+						} else if (responseStrapi.data.data.length == 0) {
+
+							// check if its an area with service on a state
+							console.log('s:state')
+							const responseStrapi = await axios.get('http://localhost:1337/api/states?&filters[zipcodes][$containsi]=' + responseBigDataCloud.data.postcode)
+
+							if(responseStrapi.data.data.length == 1) {
+								console.log(responseStrapi.data.data)
+
+								// responseStrapi
+								this.userStrapiInfo = JSON.stringify(responseStrapi.data.data[0])
+								this.userLocation = responseStrapi.data.data[0].attributes.state
+								this.sliderServices = responseStrapi.data.data[0].attributes.state_services
+								// service area
+								this.userServiceArea = 1
+
+							} else {
+								this.userServiceArea = 0
+							}
 						} else {
-
 							this.userServiceArea = 0
-
 						}
 
 				} else {
